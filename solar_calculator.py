@@ -52,7 +52,7 @@ system_kw = num_panels * panel_wattage / 1000
 voc_per_panel = 49.5
 imp_per_panel = 13
 total_voc = voc_per_panel * num_panels
-mppt_current = imp_per_panel * num_panels
+mppt_current = imp_per_panel
 
 # Output Section
 st.markdown("---")

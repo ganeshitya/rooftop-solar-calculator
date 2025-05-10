@@ -58,7 +58,7 @@ mppt_current = imp_per_panel
 st.markdown("---")
 st.subheader("Your Solar Sizing Summary for Panels in Series")
 st.success(f"**Total Load**: {total_wattage} W")
-st.info(f"**Recommended Number of 550W Panels**: {num_panels}")
+st.info(f"**Recommended Number of 550W Panels in Series**: {num_panels}")
 st.write(f"**Estimated System Capacity**: {system_kw:.2f} kW")
 st.write(f"**Total Voc (Open Circuit Voltage)**: ~{total_voc:.1f} V")
 st.write(f"**MPPT Current Required**: ~{mppt_current:.1f} A")

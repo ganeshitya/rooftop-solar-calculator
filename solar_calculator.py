@@ -11,7 +11,7 @@ import streamlit as st
 
 st.set_page_config(page_title="Rooftop Solar Sizing Calculator", page_icon="🔋")
 
-st.title("🔋 Rooftop Solar Calculator (550W Panel Based)")
+st.title("🔋 Rooftop Solar Calculator (550W Based) by Ganesh Moorthi")
 st.write("Estimate how many 550W solar panels you need based on your home's daily loads.")
 
 st.markdown("---")

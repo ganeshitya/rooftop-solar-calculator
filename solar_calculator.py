@@ -48,6 +48,39 @@ panel_wattage = 550
 num_panels = round(total_wattage / panel_wattage + 0.4)
 system_kw = num_panels * panel_wattage / 1000
 
+# Region-specific solar generation potential (average irradiance in kWh/kWp/day)
+irradiance_data = {
+    "Andhra Pradesh": 5.5,
+    "Tamil Nadu": 5.6,
+    "Karnataka": 5.4,
+    "Kerala": 4.8,
+    "Maharashtra": 5.5,
+    "Gujarat": 5.7,
+    "Rajasthan": 5.9,
+    "Delhi": 5.3,
+    "West Bengal": 4.7,
+    "Punjab": 5.2,
+    "Madhya Pradesh": 5.5,
+    "Uttar Pradesh": 5.3,
+    "Bihar": 4.9,
+    "Odisha": 5.1,
+    "Assam": 4.5,
+    "Telangana": 5.4,
+    "Jharkhand": 4.8,
+    "Himachal Pradesh": 4.6,
+    "Uttarakhand": 4.7
+}
+
+st.markdown("### 🌞 Select Your State to Estimate Daily Solar Output")
+selected_state = st.selectbox("Choose your state", list(irradiance_data.keys()))
+irradiance = irradiance_data[selected_state]
+
+# Calculate estimated daily energy output
+estimated_daily_output = irradiance * system_kw  # in kWh/day
+
+st.info(f"☀️ **Estimated Daily Energy Output in {selected_state}**: {estimated_daily_output:.1f} kWh/day")
+
+
 # Electrical characteristics
 voc_per_panel = 49.5
 imp_per_panel = 13

@@ -56,7 +56,7 @@ mppt_current = imp_per_panel
 
 # Output Section
 st.markdown("---")
-st.subheader("📊 Your Solar Sizing Summary")
+st.subheader("Your Solar Sizing Summary for Panels in Series")
 st.success(f"**Total Load**: {total_wattage} W")
 st.info(f"**Recommended Number of 550W Panels**: {num_panels}")
 st.write(f"**Estimated System Capacity**: {system_kw:.2f} kW")

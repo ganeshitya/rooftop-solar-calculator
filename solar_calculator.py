@@ -78,8 +78,6 @@ irradiance = irradiance_data[selected_state]
 # Calculate estimated daily energy output
 estimated_daily_output = irradiance * system_kw  # in kWh/day
 
-st.info(f"☀️ **Estimated Daily Energy Output in {selected_state}**: {estimated_daily_output:.1f} kWh/day")
-
 
 # Electrical characteristics
 voc_per_panel = 49.5
@@ -95,6 +93,7 @@ st.info(f"**Recommended Number of 550W Panels in Series**: {num_panels}")
 st.write(f"**Estimated System Capacity**: {system_kw:.2f} kW")
 st.write(f"**Total Voc (Open Circuit Voltage)**: ~{total_voc:.1f} V")
 st.write(f"**MPPT Current Required**: ~{mppt_current:.1f} A")
+st.info(f"☀️ **Estimated Daily Energy Output in {selected_state}**: {estimated_daily_output:.1f} kWh/day")
 
 if num_panels <= 9:
     st.success("✅ Single-MPPT String Inverter is suitable for this setup.")
